@@ -1,0 +1,18 @@
+targets:
+  $default:
+    builders:
+      json_serializable:
+        options:
+          explicit_to_json: true
+          field_rename: none
+          include_if_null: false
+      freezed:
+        options:
+          # 让 copyWith 支持把字段显式设为 null
+          copy_with: true
+          equal: true
+          to_string: true
+      retrofit_generator:
+        options:
+          # 生成文件放一起, 方便定位
+          auto_generated_comment: true

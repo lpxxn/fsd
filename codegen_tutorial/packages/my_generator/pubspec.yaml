@@ -1,0 +1,17 @@
+name: my_generator
+description: "第 2 章: 教学用的 source_gen generator。提供 @ToStringGen 注解。"
+version: 0.1.0
+publish_to: none
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  analyzer: ^9.0.0
+  build: ^4.0.0
+  source_gen: ^4.0.0
+  meta: any
+
+dev_dependencies:
+  build_runner: ^2.4.0
+  lints: any

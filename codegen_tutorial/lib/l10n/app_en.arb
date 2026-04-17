@@ -1,0 +1,26 @@
+{
+  "@@locale": "en",
+  "appTitle": "Codegen Tutorial",
+  "@appTitle": {
+    "description": "App title shown on the Demo page."
+  },
+  "greeting": "Hello, {name}!",
+  "@greeting": {
+    "description": "Greets a user by name.",
+    "placeholders": {
+      "name": {
+        "type": "String",
+        "example": "Alice"
+      }
+    }
+  },
+  "unreadCount": "{count, plural, =0{No unread messages} =1{1 unread message} other{{count} unread messages}}",
+  "@unreadCount": {
+    "description": "Plural of unread count.",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  }
+}

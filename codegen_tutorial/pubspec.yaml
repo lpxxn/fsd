@@ -1,0 +1,96 @@
+name: codegen_tutorial
+description: "Flutter 代码生成教程工程: build_runner + source_gen 系列实战。"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+
+  # 第 2 章: 我们自己写的 generator 提供的注解
+  my_generator:
+    path: packages/my_generator
+
+  # 第 3 章 json_serializable: runtime 注解 + 工具
+  json_annotation: ^4.9.0
+
+  # 第 4 章 freezed: runtime 注解
+  freezed_annotation: ^3.0.0
+
+  # 第 6 章 riverpod_generator 的运行时
+  flutter_riverpod: ^3.3.1
+  riverpod_annotation: ^4.0.2
+
+  # 第 7 章 injectable + get_it
+  injectable: ^2.5.0
+  get_it: ^8.0.0
+
+  # 第 9 章 retrofit + dio
+  retrofit: ^4.4.0
+  dio: ^5.7.0
+
+  # 第 10 章 auto_route
+  auto_route: any
+
+  # 第 11 章 drift (SQLite ORM)
+  drift: ^2.20.0
+  sqlite3_flutter_libs: ^0.5.24
+  path_provider: ^2.1.4
+  path: ^1.9.0
+
+  # 第 13 章 intl (l10n)
+  intl: any
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+  build_runner: ^2.4.13
+
+  # 第 3 章
+  json_serializable: ^6.8.0
+
+  # 第 4 章
+  freezed: ^3.0.0
+
+  # 第 6 章
+  riverpod_generator: ^4.0.3
+
+  # 第 7 章
+  injectable_generator: ^2.6.2
+
+  # 第 8 章 mockito / mocktail (两个并存, 用于对比)
+  mockito: ^5.4.4
+  mocktail: ^1.0.4
+
+  # 第 9 章
+  retrofit_generator: ^10.2.5
+
+  # 第 10 章
+  auto_route_generator: any
+
+  # 第 11 章
+  drift_dev: ^2.20.0
+
+  # 第 14 章 flutter_gen: 资源强类型
+  flutter_gen_runner: ^5.7.0
+
+flutter:
+  uses-material-design: true
+  generate: true   # 开启 l10n 代码生成 (第 13 章)
+  assets:
+    - assets/images/
+    - assets/data/
+
+flutter_gen:
+  output: lib/gen/
+  line_length: 100
+  integrations:
+    flutter_svg: false
