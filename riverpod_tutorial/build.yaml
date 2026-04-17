@@ -1,0 +1,11 @@
+targets:
+  $default:
+    builders:
+      riverpod_generator:
+        options:
+          # 保留默认 "Provider" 后缀，也可以改成 "Pod" 等
+          provider_name_suffix: "Provider"
+          provider_family_name_suffix: "Provider"
+          # 把类名末尾的 "Notifier" 去掉，让生成的 provider 名更简洁：
+          # class CounterNotifier -> counterProvider
+          provider_name_strip_pattern: "Notifier$"
